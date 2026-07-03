@@ -1,0 +1,42 @@
+import { defineConfig } from 'tsup';
+
+export default defineConfig([
+  {
+    entry: ['src/index.ts'],
+    format: ['cjs', 'esm'],
+    dts: true,
+    splitting: false,
+    sourcemap: true,
+    clean: true,
+    treeshake: true,
+  },
+  {
+    entry: {
+      'constants/index': 'src/constants/index.ts',
+      'errors/index': 'src/errors/index.ts',
+      'utilities/index': 'src/utilities/index.ts',
+      'date/index': 'src/date/index.ts',
+      'strings/index': 'src/strings/index.ts',
+      'numbers/index': 'src/numbers/index.ts',
+      'arrays/index': 'src/arrays/index.ts',
+      'objects/index': 'src/objects/index.ts',
+      'validators/index': 'src/validators/index.ts',
+      'types/index': 'src/types/index.ts',
+      'schemas/index': 'src/schemas/index.ts',
+      'configuration/index': 'src/configuration/index.ts',
+      'logging/index': 'src/logging/index.ts',
+      'interfaces/index': 'src/interfaces/index.ts',
+      'environments/index': 'src/environments/index.ts',
+      'promises/index': 'src/promises/index.ts',
+      'functions/index': 'src/functions/index.ts',
+      'collections/index': 'src/collections/index.ts',
+      'crypto/index': 'src/crypto/index.ts',
+    },
+    format: ['cjs', 'esm'],
+    dts: true,
+    splitting: false,
+    sourcemap: true,
+    clean: true,
+    treeshake: true,
+  },
+]);

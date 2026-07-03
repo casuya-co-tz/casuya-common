@@ -1,0 +1,152 @@
+{
+  "name": "@casuya/common",
+  "version": "0.2.0",
+  "description": "Shared utilities, types, and helpers for the Casuya ecosystem",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./constants": {
+      "types": "./dist/constants/index.d.ts",
+      "import": "./dist/constants/index.mjs",
+      "require": "./dist/constants/index.js"
+    },
+    "./errors": {
+      "types": "./dist/errors/index.d.ts",
+      "import": "./dist/errors/index.mjs",
+      "require": "./dist/errors/index.js"
+    },
+    "./utilities": {
+      "types": "./dist/utilities/index.d.ts",
+      "import": "./dist/utilities/index.mjs",
+      "require": "./dist/utilities/index.js"
+    },
+    "./date": {
+      "types": "./dist/date/index.d.ts",
+      "import": "./dist/date/index.mjs",
+      "require": "./dist/date/index.js"
+    },
+    "./strings": {
+      "types": "./dist/strings/index.d.ts",
+      "import": "./dist/strings/index.mjs",
+      "require": "./dist/strings/index.js"
+    },
+    "./numbers": {
+      "types": "./dist/numbers/index.d.ts",
+      "import": "./dist/numbers/index.mjs",
+      "require": "./dist/numbers/index.js"
+    },
+    "./arrays": {
+      "types": "./dist/arrays/index.d.ts",
+      "import": "./dist/arrays/index.mjs",
+      "require": "./dist/arrays/index.js"
+    },
+    "./objects": {
+      "types": "./dist/objects/index.d.ts",
+      "import": "./dist/objects/index.mjs",
+      "require": "./dist/objects/index.js"
+    },
+    "./validators": {
+      "types": "./dist/validators/index.d.ts",
+      "import": "./dist/validators/index.mjs",
+      "require": "./dist/validators/index.js"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/types/index.mjs",
+      "require": "./dist/types/index.js"
+    },
+    "./schemas": {
+      "types": "./dist/schemas/index.d.ts",
+      "import": "./dist/schemas/index.mjs",
+      "require": "./dist/schemas/index.js"
+    },
+    "./configuration": {
+      "types": "./dist/configuration/index.d.ts",
+      "import": "./dist/configuration/index.mjs",
+      "require": "./dist/configuration/index.js"
+    },
+    "./logging": {
+      "types": "./dist/logging/index.d.ts",
+      "import": "./dist/logging/index.mjs",
+      "require": "./dist/logging/index.js"
+    },
+    "./interfaces": {
+      "types": "./dist/interfaces/index.d.ts",
+      "import": "./dist/interfaces/index.mjs",
+      "require": "./dist/interfaces/index.js"
+    },
+    "./environments": {
+      "types": "./dist/environments/index.d.ts",
+      "import": "./dist/environments/index.mjs",
+      "require": "./dist/environments/index.js"
+    },
+    "./promises": {
+      "types": "./dist/promises/index.d.ts",
+      "import": "./dist/promises/index.mjs",
+      "require": "./dist/promises/index.js"
+    },
+    "./functions": {
+      "types": "./dist/functions/index.d.ts",
+      "import": "./dist/functions/index.mjs",
+      "require": "./dist/functions/index.js"
+    },
+    "./collections": {
+      "types": "./dist/collections/index.d.ts",
+      "import": "./dist/collections/index.mjs",
+      "require": "./dist/collections/index.js"
+    },
+    "./crypto": {
+      "types": "./dist/crypto/index.d.ts",
+      "import": "./dist/crypto/index.mjs",
+      "require": "./dist/crypto/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run test && npm run typecheck"
+  },
+  "keywords": [
+    "casuya",
+    "utilities",
+    "shared",
+    "common",
+    "types",
+    "helpers"
+  ],
+  "author": "Casuya",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/casuya/casuya-common.git"
+  },
+  "bugs": {
+    "url": "https://github.com/casuya/casuya-common/issues"
+  },
+  "homepage": "https://github.com/casuya/casuya-common#readme"
+}

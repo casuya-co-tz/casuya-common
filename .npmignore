@@ -1,0 +1,31 @@
+# Source files (only dist is needed)
+src/
+
+# Test files
+tests/
+*.test.ts
+*.spec.ts
+
+# Configuration
+tsconfig.json
+tsup.config.ts
+vitest.config.ts
+
+# Development
+.gitignore
+.eslintrc*
+.prettierrc*
+
+# Documentation
+README.md
+CHANGELOG.md
+docs/
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+
+# Misc
+.DS_Store
+*.log
+node_modules/
