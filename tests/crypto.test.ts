@@ -20,9 +20,15 @@ describe('crypto', () => {
       expect(id).toMatch(/^[0-9A-Z]{26}$/);
     });
 
-    it('should be sortable by time', () => {
-      const ids = [ulid(), ulid()];
-      expect(ids[0]! <= ids[1]!).toBe(true);
+    it('should produce monotonically non-decreasing IDs', () => {
+      const ids = Array.from({ length: 10 }, () => ulid());
+      for (const id of ids) {
+        expect(id).toMatch(/^[0-9A-Z]{26}$/);
+      }
+      const timeParts = ids.map(id => id.substring(0, 10));
+      for (let i = 1; i < timeParts.length; i++) {
+        expect(timeParts[i]! >= timeParts[i - 1]!).toBe(true);
+      }
     });
   });
 

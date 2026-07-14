@@ -132,3 +132,6 @@ export * from './collections';
 
 // Crypto
 export * from './crypto';
+
+// Ecosystem shared types
+export * from './ecosystem';
